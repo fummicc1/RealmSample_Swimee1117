@@ -11,8 +11,8 @@
 		D34FF1F52185667900039A5F /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1F42185667900039A5F /* Diary.swift */; };
 		D34FF1F821856EA800039A5F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1F721856EA800039A5F /* CalendarViewController.swift */; };
 		D34FF1FA21856EFC00039A5F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1F921856EFC00039A5F /* UIViewController.swift */; };
-		D34FF1FC218571B100039A5F /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1FB218571B100039A5F /* DiaryViewController.swift */; };
-		D34FF1FE218571BD00039A5F /* DiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FF1FD218571BD00039A5F /* DiaryViewController.storyboard */; };
+		D34FF1FC218571B100039A5F /* MakeDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1FB218571B100039A5F /* MakeDiaryViewController.swift */; };
+		D34FF1FE218571BD00039A5F /* MakeDiaryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34FF1FD218571BD00039A5F /* MakeDiaryViewController.storyboard */; };
 		D34FF2002185749C00039A5F /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34FF1FF2185749C00039A5F /* UITextView.swift */; };
 		D3D695ED2185625100B58E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D695EC2185625100B58E56 /* AppDelegate.swift */; };
 		D3D695F22185625100B58E56 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D695F02185625100B58E56 /* CalendarViewController.storyboard */; };
@@ -26,8 +26,8 @@
 		D34FF1F42185667900039A5F /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		D34FF1F721856EA800039A5F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		D34FF1F921856EFC00039A5F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		D34FF1FB218571B100039A5F /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
-		D34FF1FD218571BD00039A5F /* DiaryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryViewController.storyboard; sourceTree = "<group>"; };
+		D34FF1FB218571B100039A5F /* MakeDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDiaryViewController.swift; sourceTree = "<group>"; };
+		D34FF1FD218571BD00039A5F /* MakeDiaryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MakeDiaryViewController.storyboard; sourceTree = "<group>"; };
 		D34FF1FF2185749C00039A5F /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		D3D695E92185625100B58E56 /* SwimeeSample_fummicc1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimeeSample_fummicc1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D695EC2185625100B58E56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				D34FF1F721856EA800039A5F /* CalendarViewController.swift */,
-				D34FF1FB218571B100039A5F /* DiaryViewController.swift */,
+				D34FF1FB218571B100039A5F /* MakeDiaryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				D3D695F02185625100B58E56 /* CalendarViewController.storyboard */,
-				D34FF1FD218571BD00039A5F /* DiaryViewController.storyboard */,
+				D34FF1FD218571BD00039A5F /* MakeDiaryViewController.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D695F72185625300B58E56 /* LaunchScreen.storyboard in Resources */,
-				D34FF1FE218571BD00039A5F /* DiaryViewController.storyboard in Resources */,
+				D34FF1FE218571BD00039A5F /* MakeDiaryViewController.storyboard in Resources */,
 				D3D695F42185625300B58E56 /* Assets.xcassets in Resources */,
 				D3D695F22185625100B58E56 /* CalendarViewController.storyboard in Resources */,
 			);
@@ -286,7 +286,7 @@
 			files = (
 				D34FF1F821856EA800039A5F /* CalendarViewController.swift in Sources */,
 				D34FF2002185749C00039A5F /* UITextView.swift in Sources */,
-				D34FF1FC218571B100039A5F /* DiaryViewController.swift in Sources */,
+				D34FF1FC218571B100039A5F /* MakeDiaryViewController.swift in Sources */,
 				D3D695ED2185625100B58E56 /* AppDelegate.swift in Sources */,
 				D34FF1FA21856EFC00039A5F /* UIViewController.swift in Sources */,
 				D34FF1F52185667900039A5F /* Diary.swift in Sources */,

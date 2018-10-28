@@ -17,7 +17,9 @@ class CalendarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // DBのファイルの場所
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         // realmをインスタンス化
         
@@ -29,11 +31,10 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        let selectedDateComponents: (Int, Int, Int) = getDay(date) //現在の日付を取得
-        
+    
         // 画面遷移を行う。
-        let diaryVC = UIStoryboard(name: "DiaryViewController", bundle: nil).instantiateInitialViewController() as! DiaryViewController
-        diaryVC.selectedDateComponent = selectedDateComponents //タップした日付の日時を次の画面に渡してあげる。
+        let diaryVC = UIStoryboard(name: "MakeDiaryViewController", bundle: nil).instantiateInitialViewController() as! MakeDiaryViewController
+        diaryVC.date = date
         present(diaryVC, animated: true, completion: nil)
     }
 }
