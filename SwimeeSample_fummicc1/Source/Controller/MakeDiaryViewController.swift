@@ -40,4 +40,7 @@ class MakeDiaryViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func tappedBackButton() {
+        dismiss(animated: true, completion: nil)
+    }
 }

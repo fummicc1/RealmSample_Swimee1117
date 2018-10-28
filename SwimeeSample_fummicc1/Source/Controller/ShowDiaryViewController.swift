@@ -21,4 +21,8 @@ class ShowDiaryViewController: UIViewController {
         titleLabel.text = diary.title
         contentLabel.text = diary.content
     }
+    
+    @IBAction func tappedBackButton() {
+        dismiss(animated: true, completion: nil)
+    }
 }
