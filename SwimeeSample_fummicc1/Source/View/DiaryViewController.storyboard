@@ -41,6 +41,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dhG-Qy-FOQ"/>
                     </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="Rmt-Qc-oga" id="e7X-2s-tCP"/>
+                        <outlet property="titleTextField" destination="DAK-zD-EhC" id="PrN-I3-O50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mL-E1-L4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

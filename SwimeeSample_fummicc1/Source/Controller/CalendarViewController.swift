@@ -33,6 +33,7 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
         
         // 画面遷移を行う。
         let diaryVC = UIStoryboard(name: "DiaryViewController", bundle: nil).instantiateInitialViewController() as! DiaryViewController
+        diaryVC.selectedDateComponent = selectedDateComponents //タップした日付の日時を次の画面に渡してあげる。
         present(diaryVC, animated: true, completion: nil)
     }
 }
