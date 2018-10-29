@@ -14,7 +14,7 @@ class CalendarViewController: UIViewController {
 
     var realm: Realm! //利便性のためにパブリックな変数で宣言しておく。
     
-    var diaries: Results<Diary>! //日記のデータを保存しておくためのもの。
+    var diaries: Results<Diary>! //日記のデータを保存しておくための変数。
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,5 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
             makeDiaryVC.date = date
             present(makeDiaryVC, animated: true, completion: nil)
         }
-        
-        
     }
 }
