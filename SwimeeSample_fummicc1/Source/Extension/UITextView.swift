@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UITextView: UITextViewDelegate {
+extension UITextView {
     
     func setCloseKeyBoardButton() {
         
@@ -22,5 +22,29 @@ extension UITextView: UITextViewDelegate {
     
     @objc func closeKeyBoard() {
         self.endEditing(true) //キーボードを閉じるコード
+    }
+    
+    /// 今回はUILabelを置いてます。
+    func showPlaceHolder() {
+        let label = UILabel()
+        
+        switch textAlignment {
+        
+        case .center:
+            
+            label.frame = CGRect(x: 0, y: 0, width: 120, height: 30)
+            label.center = CGPoint(x: bounds.midX, y: bounds.midY)
+        case .right:
+            
+            label.frame = CGRect(x: 0, y: 0, width: 120, height: 30)
+        case .left:
+            
+            label.frame = CGRect(x: 0, y: 0, width: 120, height: 30)
+        default:
+            break
+        }
+        label.text = "タップして入力"
+        addSubview(label)
+        
     }
 }
