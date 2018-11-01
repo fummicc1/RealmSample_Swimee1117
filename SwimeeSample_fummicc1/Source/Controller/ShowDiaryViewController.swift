@@ -7,22 +7,36 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ShowDiaryViewController: UIViewController {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var contentLabel: UILabel!
     
+    var realm: Realm! //パブリック変数にしてどこでも呼べるようにしておく
     var diary: Diary! //表示する日記のオブジェクト
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        realm = try! Realm()
         
         titleLabel.text = diary.title
         contentLabel.text = diary.content
     }
     
     @IBAction func tappedBackButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func tappedDeleteButton() {
+        
+        // データの更新はwriteメソッドの中でしないといけない
+        try! realm.write {
+            realm.delete(diary)
+        }
         dismiss(animated: true, completion: nil)
     }
 }

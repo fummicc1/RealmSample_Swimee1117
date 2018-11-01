@@ -22,11 +22,34 @@ class MakeDiaryViewController: UIViewController {
         super.viewDidLoad()
         
         realm = try! Realm() //realmのインスタンス生成
+        
         contentTextView.setCloseKeyBoardButton() //キーボードに閉じるボタンを設定。
+        contentTextView.showPlaceHolder()
+        
+        contentTextView.delegate = self
+        titleTextField.delegate = self
+    }
+    
+    
+    /// check if text exsits.
+    ///
+    /// - Parameter text: チェックしたいテキスト
+    /// - Returns: falseなら文字が入ってて、trueなら空欄
+    func checkTextIsEmpty(text: String) -> Bool {
+        
+        if text.isEmpty {
+            return true
+        }else {
+            return false
+        }
     }
     
     //日記を保存する処理を書こう。
     @IBAction func save() {
+        
+        if checkTextIsEmpty(text: titleTextField.text!) || checkTextIsEmpty(text: contentTextView.text!) {
+            return
+        }
         
         let diary = Diary() // 日記のオブジェクトを作成。
         diary.title = titleTextField.text!

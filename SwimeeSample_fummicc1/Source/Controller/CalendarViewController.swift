@@ -12,13 +12,17 @@ import RealmSwift
 
 class CalendarViewController: UIViewController {
 
-    var realm: Realm! //利便性のためにパブリックな変数で宣言しておく。
+    @IBOutlet var calendarView: FSCalendar!
     
+    var realm: Realm! //利便性のためにパブリックな変数で宣言しておく。
     var diaries: Results<Diary>! //日記のデータを保存しておくための変数。
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calendarView.delegate = self
+        calendarView.dataSource = self
         print(Realm.Configuration.defaultConfiguration.fileURL!) // DBのファイルの場所
         realm = try! Realm() // realmをインスタンス化
     }
