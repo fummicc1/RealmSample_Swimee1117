@@ -28,6 +28,8 @@ class MakeDiaryViewController: UIViewController {
         
         contentTextView.delegate = self
         titleTextField.delegate = self
+        
+        setGradient()
     }
     
     

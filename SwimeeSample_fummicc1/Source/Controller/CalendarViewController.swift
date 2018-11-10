@@ -25,6 +25,8 @@ class CalendarViewController: UIViewController {
         calendarView.dataSource = self
         print(Realm.Configuration.defaultConfiguration.fileURL!) // DBのファイルの場所
         realm = try! Realm() // realmをインスタンス化
+        
+        setGradient()
     }
     
 }

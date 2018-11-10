@@ -54,3 +54,28 @@ extension MakeDiaryViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension UIViewController {
+    
+    func setGradient() {
+        
+        //グラデーションの開始色
+        let topColor = UIColor(red:76/255, green:217/255, blue:100/255, alpha:1)
+        
+        //グラデーションの開始色
+        let bottomColor = UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha:1)
+        
+        //グラデーションの色を配列で管理
+        let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
+        
+        //グラデーションレイヤーを作成
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        
+        //グラデーションの色をレイヤーに割り当てる
+        gradientLayer.colors = gradientColors
+        //グラデーションレイヤーをスクリーンサイズにする
+        gradientLayer.frame = view.bounds
+        
+        view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+}

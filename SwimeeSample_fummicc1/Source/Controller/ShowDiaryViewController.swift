@@ -25,6 +25,8 @@ class ShowDiaryViewController: UIViewController {
         
         titleLabel.text = diary.title
         contentLabel.text = diary.content
+        
+        setGradient()
     }
     
     @IBAction func tappedBackButton() {
