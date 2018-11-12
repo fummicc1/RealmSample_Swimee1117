@@ -21,15 +21,14 @@ class MakeDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        realm = try! Realm() //realmのインスタンス生成
-        
         contentTextView.setCloseKeyBoardButton() //キーボードに閉じるボタンを設定。
         contentTextView.showPlaceHolder()
-        
         contentTextView.delegate = self
         titleTextField.delegate = self
         
         setGradient()
+        
+        realm = try! Realm() //realmのインスタンス生成
     }
     
     
