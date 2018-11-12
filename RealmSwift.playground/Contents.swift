@@ -1,6 +1,8 @@
 
 
 import RealmSwift
+import Foundation
+import UIKit
 //: realmのインスタンスは何回作っても共通
 let realm = try! Realm() //Realmのデータベースを作成
 
@@ -8,7 +10,7 @@ let realm2 = try! Realm() //Realmのデータベースを作成
 
 //: Realmのデータベースにデータを追加する。
 
-realm.add() // ()の中に保存したい物をかく。
+realm.add(Object()) // ()の中に保存したい物をかく。
 
 //: このままだと落ちます。
 
@@ -28,3 +30,11 @@ class Diary: Object {
 }
 
 //: クラスには`Object`クラスを継承して、変数には`@objc`をつけましょう。
+
+//: オブジェクトがStandAlone出ない限りはトランザクション内でUIの更新処理を書かないと行けない。
+
+//: ダメな例
+
+let diary = realm.objects(Diary.self).first!
+
+diary.title = "new title" // 落ちる

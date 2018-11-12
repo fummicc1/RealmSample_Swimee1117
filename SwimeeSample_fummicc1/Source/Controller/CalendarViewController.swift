@@ -23,12 +23,12 @@ class CalendarViewController: UIViewController {
         
         calendarView.delegate = self
         calendarView.dataSource = self
+        setGradient()
+        
         print(Realm.Configuration.defaultConfiguration.fileURL!) // DBのファイルの場所
         realm = try! Realm() // realmをインスタンス化
         
-        setGradient()
     }
-    
 }
 
 extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {

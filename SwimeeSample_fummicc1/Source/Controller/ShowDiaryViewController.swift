@@ -21,12 +21,12 @@ class ShowDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        realm = try! Realm()
-        
         titleLabel.text = diary.title
         contentLabel.text = diary.content
         
         setGradient()
+        
+        realm = try! Realm()
     }
     
     @IBAction func tappedBackButton() {
