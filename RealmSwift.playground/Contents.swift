@@ -15,7 +15,7 @@ realm.add(Object()) // ()の中に保存したい物をかく。
 //: このままだと落ちます。
 
 try! realm.write {
-    realm.add() // ()の中に保存したい物をかく。
+    realm.add(Object()) // ()の中に保存したい物をかく。
 }
 
 //: `realm.write`の中に書いてあげましょう。
