@@ -38,3 +38,7 @@ class Diary: Object {
 let diary = realm.objects(Diary.self).first!
 
 diary.title = "new title" // 落ちる
+
+try! realm.write {
+    diary.title = "new title" // 落ちない
+}
