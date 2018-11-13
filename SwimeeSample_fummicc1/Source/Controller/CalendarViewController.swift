@@ -14,7 +14,13 @@ class CalendarViewController: UIViewController {
 
     @IBOutlet var calendarView: FSCalendar!
     
-    var realm: Realm! //利便性のためにパブリックな変数で宣言しておく。
+    /*
+     realmのインスタンスの生成の仕方
+     var realm = try! Realm()
+    */
+    // ここにrealmの宣言だけしておく。
+    
+    
     var diaries: Results<Diary>! //日記のデータを保存しておくための変数。
     
     
@@ -26,7 +32,11 @@ class CalendarViewController: UIViewController {
         setGradient()
         
         print(Realm.Configuration.defaultConfiguration.fileURL!) // DBのファイルの場所
-        realm = try! Realm() // realmをインスタンス化
+        
+        /*
+         ここにrealmのインスタンスを作成しよう
+         上で宣言したrealmを使う。
+         */
         
     }
 }
@@ -35,15 +45,12 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
-        if let diary = realm.objects(Diary.self).filter("postDate== %@", date).first {
-            let showDiaryVC = UIStoryboard(name: "ShowDiaryViewController", bundle: nil).instantiateInitialViewController() as! ShowDiaryViewController
-            showDiaryVC.diary = diary
-            present(showDiaryVC, animated: true, completion: nil)
-        }else {
-            // 画面遷移を行う。
-            let makeDiaryVC = UIStoryboard(name: "MakeDiaryViewController", bundle: nil).instantiateInitialViewController() as! MakeDiaryViewController
-            makeDiaryVC.date = date
-            present(makeDiaryVC, animated: true, completion: nil)
-        }
+        /*
+         カレンダーがタップされたら
+            1. タップした日付からもうすでにその日の日記が書かれているかを調べる。
+            2. すでに日記があったら、ShowDiaryViewControllerへ画面遷移。無ければ、MakeDiaryViewControllerへ画面遷移。
+         */
+        
+        
     }
 }
