@@ -451,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2K446D59RQ;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				INFOPLIST_FILE = "$(SRCROOT)/SwimeeSample_fummicc1/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2K446D59RQ;
+				DEVELOPMENT_TEAM = S8WBNKMKYU;
 				INFOPLIST_FILE = "$(SRCROOT)/SwimeeSample_fummicc1/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

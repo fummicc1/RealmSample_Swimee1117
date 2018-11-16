@@ -1,9 +1,7 @@
-
-
 import RealmSwift
 import Foundation
 import UIKit
-//: realmのインスタンスは何回作っても共通
+//: realmのインスタンスはキャッシュされる。
 let realm = try! Realm() //Realmのデータベースを作成
 
 let realm2 = try! Realm() //Realmのデータベースを作成
