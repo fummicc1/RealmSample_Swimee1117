@@ -41,5 +41,10 @@ class ShowDiaryViewController: UIViewController {
     
     /// ここでrealmのオブジェクトを削除する。
     func deleteObject() {
+        
+        try! realm.write {
+            
+            realm.delete(diary)
+        }
     }
 }

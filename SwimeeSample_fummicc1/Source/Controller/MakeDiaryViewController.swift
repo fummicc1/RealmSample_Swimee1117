@@ -64,5 +64,14 @@ class MakeDiaryViewController: UIViewController {
     
     /// ここでrealmにデータを保存していく。
     func createObject() {
+        
+        let diary = Diary()
+        diary.title = titleTextField.text!
+        diary.content = contentTextView.text!
+        diary.postDate = date
+        
+        try! realm.write {
+            realm.add(diary)
+        }
     }
 }

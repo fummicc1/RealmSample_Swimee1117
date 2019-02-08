@@ -22,9 +22,9 @@ try! realm.write {
 
 class Diary: Object {
     
-    @objc var title: String = ""
-    @objc var content: String = ""
-    @objc var date: Date!
+    @objc dynamic var title: String = ""
+    @objc dynamic var content: String = ""
+    @objc dynamic var date: Date!
 }
 
 //: クラスには`Object`クラスを継承して、変数には`@objc`をつけましょう。
