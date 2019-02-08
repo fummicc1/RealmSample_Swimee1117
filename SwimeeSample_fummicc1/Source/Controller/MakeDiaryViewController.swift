@@ -52,7 +52,20 @@ class MakeDiaryViewController: UIViewController {
             return
         }
         
-        let diary = Diary() // 日記のオブジェクトを作成。
+        createObject()
+        
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func tappedBackButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    /// ここでrealmにデータを保存していく。
+    func createObject() {
+        
+        let diary = Diary()
         diary.title = titleTextField.text!
         diary.content = contentTextView.text!
         diary.postDate = date
@@ -60,11 +73,5 @@ class MakeDiaryViewController: UIViewController {
         try! realm.write {
             realm.add(diary)
         }
-        
-        dismiss(animated: true, completion: nil)
-    }
-
-    @IBAction func tappedBackButton() {
-        dismiss(animated: true, completion: nil)
     }
 }

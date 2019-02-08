@@ -1,9 +1,7 @@
-
-
 import RealmSwift
 import Foundation
 import UIKit
-//: realmのインスタンスは何回作っても共通
+//: realmのインスタンスはキャッシュされる。
 let realm = try! Realm() //Realmのデータベースを作成
 
 let realm2 = try! Realm() //Realmのデータベースを作成
@@ -15,7 +13,7 @@ realm.add(Object()) // ()の中に保存したい物をかく。
 //: このままだと落ちます。
 
 try! realm.write {
-    realm.add() // ()の中に保存したい物をかく。
+    realm.add(Object()) // ()の中に保存したい物をかく。
 }
 
 //: `realm.write`の中に書いてあげましょう。
@@ -24,9 +22,9 @@ try! realm.write {
 
 class Diary: Object {
     
-    @objc var title: String = ""
-    @objc var content: String = ""
-    @objc var date: Date!
+    @objc dynamic var title: String = ""
+    @objc dynamic var content: String = ""
+    @objc dynamic var date: Date!
 }
 
 //: クラスには`Object`クラスを継承して、変数には`@objc`をつけましょう。

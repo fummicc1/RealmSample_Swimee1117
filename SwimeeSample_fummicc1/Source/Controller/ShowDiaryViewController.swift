@@ -35,10 +35,16 @@ class ShowDiaryViewController: UIViewController {
     
     @IBAction func tappedDeleteButton() {
         
-        // データの更新はwriteメソッドの中でしないといけない
+        deleteObject()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    /// ここでrealmのオブジェクトを削除する。
+    func deleteObject() {
+        
         try! realm.write {
+            
             realm.delete(diary)
         }
-        dismiss(animated: true, completion: nil)
     }
 }
