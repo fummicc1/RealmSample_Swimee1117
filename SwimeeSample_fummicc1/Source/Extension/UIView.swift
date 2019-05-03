@@ -1,11 +1,3 @@
-//
-//  UIView.swift
-//  SwimeeSample_fummicc1
-//
-//  Created by Fumiya Tanaka on 2018/10/31.
-//  Copyright © 2018 Fumiya Tanaka. All rights reserved.
-//
-
 import Foundation
 import UIKit
 

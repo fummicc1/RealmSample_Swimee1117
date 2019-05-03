@@ -32,7 +32,6 @@
 		D34FF1FB218571B100039A5F /* MakeDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDiaryViewController.swift; sourceTree = "<group>"; };
 		D34FF1FD218571BD00039A5F /* MakeDiaryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MakeDiaryViewController.storyboard; sourceTree = "<group>"; };
 		D34FF1FF2185749C00039A5F /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
-		D393877C219707B800598339 /* RealmSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RealmSwift.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D3949BE32185BC5E006FEFED /* ShowDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDiaryViewController.swift; sourceTree = "<group>"; };
 		D3949BE62185BC8E006FEFED /* ShowDiaryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowDiaryViewController.storyboard; sourceTree = "<group>"; };
 		D3D071C92189510A0051D7F1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -95,7 +94,6 @@
 		D3D695E02185625100B58E56 = {
 			isa = PBXGroup;
 			children = (
-				D393877C219707B800598339 /* RealmSwift.playground */,
 				D3D695EB2185625100B58E56 /* SwimeeSample_fummicc1 */,
 				D3D695EA2185625100B58E56 /* Products */,
 				005EEC01B5E14C63CCADDBD5 /* Pods */,
@@ -127,7 +125,6 @@
 				D34FF1F621856E6A00039A5F /* Extension */,
 				D34FF1F32185666400039A5F /* Model */,
 				D3D69601218562CB00B58E56 /* Controller */,
-				D3D69602218562D600B58E56 /* View */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -136,8 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				D3D695F32185625300B58E56 /* Assets.xcassets */,
-				D3D695F52185625300B58E56 /* LaunchScreen.storyboard */,
 				D3D695F82185625300B58E56 /* Info.plist */,
+				D3D69602218562D600B58E56 /* Storyboard */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -160,14 +157,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		D3D69602218562D600B58E56 /* View */ = {
+		D3D69602218562D600B58E56 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D3D695F52185625300B58E56 /* LaunchScreen.storyboard */,
 				D3D695F02185625100B58E56 /* CalendarViewController.storyboard */,
 				D34FF1FD218571BD00039A5F /* MakeDiaryViewController.storyboard */,
 				D3949BE62185BC8E006FEFED /* ShowDiaryViewController.storyboard */,
 			);
-			path = View;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
